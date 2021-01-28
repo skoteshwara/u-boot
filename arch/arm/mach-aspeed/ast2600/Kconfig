@@ -53,6 +53,18 @@ config TARGET_SLT_AST2600
 
 endchoice
 
+config ASPEED_SECBOOT_BL2
+	bool "ASPEED secure boot BL2 support"
+	depends on ASPEED_AST2600
+	help
+	  Enable ASPEED's "secboot" secure boot support for verifying
+	  the SPL's playload ("BL2").
+
+	  Enable this is if you're using secure boot support in the AST2600 (or similar)
+	  to verify your u-boot proper.
+
+	  Disable this is if you are using u-boot's vboot to verify u-boot.
+
 source "board/aspeed/evb_ast2600a0/Kconfig"
 source "board/aspeed/evb_ast2600a1/Kconfig"
 source "board/aspeed/ncsi_ast2600a0/Kconfig"
