@@ -16,7 +16,7 @@
 #include <linux/libfdt.h>
 
 #ifndef CONFIG_SPL_LOAD_FIT_ADDRESS
-# define CONFIG_SPL_LOAD_FIT_ADDRESS	0
+# define CONFIG_SPL_LOAD_FIT_ADDRESS 0x10000	
 #endif
 
 static ulong spl_ram_load_read(struct spl_load_info *load, ulong sector,
